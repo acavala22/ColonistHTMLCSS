@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Obrasci</title>
+	<meta name="autor" content="Antonio Čavala">
+	<meta name="vrijemeizrade" content="Vrijeme izrade ove stranice je 1 sat">
+	<meta name="krijeci" content="videoigra,stranica">
+	<link rel="stylesheet" href="../css/dizajn.css" media="screen">
+	<link rel="stylesheet" href="../css/dizajn_responzivni_mali.css" media="screen">
+	<link rel="stylesheet" href="../css/dizajn_responzivni_srednji.css" media="screen">
+	<link rel="stylesheet" href="../css/dizajn_ispis.css" media="print">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
+</head>
+<body>
+	<header>
+	<a href="../index.html">
+		<h2>Colonist</h2> 
+		<img src="../dokumenti/slike/logo.png" alt="logo" height="100" width="200">
+	</a>
+	</header>
+	<nav>
+		<img src="../dokumenti/slike/hamburger.png" alt="Izbornik">
+		<ul>
+		
+			<li><a class="povNav" href="../index.html">Početna</a></li>
+			<li><a class="povNav" href="../dokumentacija/autor.html">O autoru</a></li>
+			<li><a class="povNav" href="../dokumentacija/dokumentacija.html">Dokumentacija</a></li>
+			<li><a class="povNav" id="active" href="../ostalo/obrasci.html">Obrasci</a></li>
+			<li><a class="povNav" href="../ostalo/galerija.html">Galerije slika i videa</a></li>
+			<li><a class="povNav" href="../ostalo/popis.html">Popis proizvoda</a></li>		
+			<li><a class="povNav" href="../ostalo/forum.html">Forum</a></li>
+
+
+		</ul>
+	</nav>
+<main>
+<section id="objavljivanje">
+<h3>Obrazac za objavljivanje na forum</h3>
+	<form method="POST" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php">
+	<label for="tema">Tema:</label>
+	<input type="text" id="tema" name="tema" maxlength="100" required>
+	<br>
+	<label for="komentar">Komentar:</label>
+	<textarea id="komentar" name="komentar" rows="50" cols="300" minlength="50" required></textarea>
+	<label for="krijeci">Ključne riječi:</label>
+	<select id="krijeci" name="krijeci[]" multiple required>
+		<option value="colonist" selected>Colonist</option>
+		<option value="prijatelji">Prijatelji</option>
+		<option value="drustvena">Društvena</option>
+		<option value="strategija">Strategija</option>
+		<option value="igra">Igra</option>
+		<option value="nacin">Način</option>
+		<option value="pravila">Pravila</option>
+		<option value="rank">Rank</option>
+		<option value="shop">Shop</option>
+		<option value="kontakt">Kontakt</option>
+	</select>
+	<br>
+	<label for="citat">Citat:</label>
+	<textarea id="citat" name="citat" rows="2" cols="300" maxlength="300"></textarea>
+	<label for="razina">Razina ili iskustvo:</label>
+	<input type="number" id="razina" name="razina" min="1" max="1024" required>
+	<button type="submit">Pošalji</button>
+	</form>
+</section>
+<hr>
+<section id="pretrazivanje">
+<h3>Obrazac za pretraživanje foruma</h3>
+	<form method="post" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php">
+	<label for="naslov">Naslov teme:</label>
+	<input type="text" id="naslov" name="naslov" required>
+	<label for="autor">Autor:</label>
+	<input type="text" id="autor" name="autor" >
+	<label for="vrijeme">Vrijeme objave:</label>
+	<select id="vrijeme" name="vrijeme">
+    <option value="sat">Poslijednji sat</option>
+    <option value="dan">Poslijednih 24h</option>
+    <option value="tjedan">Ovaj tjedan</option>
+    <option value="mjesec">Ovaj mjesec</option>
+	<option value="svev" selected>Sve vrijeme</option>
+	</select>
+	<button type="submit">Pretraži</button>
+</form>
+</section>
+<hr>
+<section id="vlastiti">
+<h3>Vlastiti obrazac</h3>
+<form method="post" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php">
+  <fieldset>
+    <legend>Osobni podaci</legend>
+    <label for="ime">Ime:</label>
+    <input type="text" id="ime" name="ime" required>
+
+    <label for="prezime">Prezime:</label>
+    <input type="text" id="prezime" name="prezime" required>
+	
+	 <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+	
+	
+    <label for="spol">Spol:</label>
+    <select id="spol" name="spol" required>
+      <option value="">Odaberi spol</option>
+      <option value="m">Muško</option>
+      <option value="z">Žensko</option>
+      <option value="o">Drugo</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Postavke u igri</legend>
+    <label>Boja polja/ceste/kuća:</label>
+   
+      <input type="radio" id="crvena" name="boja" value="crvena">
+      <label for="crvena">Crvena</label>
+   
+      <input type="radio" id="plava" name="boja" value="plava">
+      <label for="plava">Plava</label>
+    
+      <input type="radio" id="zuta" name="boja" value="zuta">
+      <label for="zuta">Žuta</label>
+	  
+	  <input type="radio" id="zelena" name="boja" value="zelena">
+      <label for="zelena">Zelena</label>
+	  
+	  <input type="radio" id="nasumicna" name="boja" value="nasumicna" checked>
+      <label for="nasumicna">Nasumična</label>
+  
+<br> 
+	<label for="kime">Korisničko ime:</label>
+    <input type="text" id="kime" name="kime" maxlength="16" required>
+	
+    <label for="server">Odaberi server:</label>
+    <select id="server" name="server" multiple required>
+      <optgroup label="Hrvatska">
+        <option value="Zagreb">Zagreb</option>
+        <option value="Split">Split</option>
+        <option value="Rijeka">Rijeka</option>
+      </optgroup>
+      <optgroup label="Amerika">
+        <option value="New York">New York</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Los Angeles">Los Angeles</option>
+      </optgroup>
+      <optgroup label="Europa">
+        <option value="Oslo">Oslo</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Rim">Rim</option>
+      </optgroup>
+    </select>
+	
+	<br>
+	
+	  <label>Resursi koje želite prikupljati:</label>  
+      <input type="checkbox" id="zeljezo" name="resursi[]" value="zeljezo" checked>
+      <label for="zeljezo">Željezo</label>
+      <input type="checkbox" id="sijeno" name="resursi[]" value="sijeno">
+      <label for="sijeno">Sijeno</label>
+      <input type="checkbox" id="drva" name="resursi[]" value="drva">
+      <label for="drva">Drva</label>
+	  <input type="checkbox" id="vuna" name="resursi[]" value="vuna">
+      <label for="vuna">Vuna</label>
+	  
+	  <br>
+	  
+	  <label>Broj igrača:</label>  
+      <input type="radio" id="dva" name="igraci" value="dva" checked>
+      <label for="dva">Dva</label>  
+      <input type="radio" id="tri" name="igraci" value="tri">
+      <label for="tri">Tri</label>    
+      <input type="radio" id="cetri" name="igraci" value="cetri">
+      <label for="cetri">Četri ili više</label>
+	  
+	  <br>
+	  
+	  <label>Vrijeme igre:</label>   
+      <input type="radio" id="brzo" name="vrijeme" value="brzo">
+      <label for="brzo">Brza igra(30 min)</label> 
+      <input type="radio" id="standard" name="vrijeme" value="standard" checked>
+      <label for="standard">Standardna igra(60min)</label>
+      <input type="radio" id="sporo" name="vrijeme" value="sporo">
+      <label for="sporo">Spora igra(90 min)</label>
+ </fieldset>
+
+  <button type="submit">Pošalji</button>
+</form>
+</section>
+<br>
+</main>
+
+	<footer>
+		<a href="https://creativecommons.org/licenses/by-nc/2.0/">
+			<img src="../dokumenti/slike/ccbync.png" alt="licenca" height="31" width="88"> </a>
+			&copy;2023 Antonio Čavala
+		<img src="../dokumenti/slike/HTML5.png" alt="html5logo" height="30" width="30">	
+	</footer>
+</body>
+</html>

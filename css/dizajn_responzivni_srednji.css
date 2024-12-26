@@ -1,0 +1,102 @@
+@media (min-width: 400px) and (max-width: 1024px) {
+.pokraj {
+	
+	flex-direction: column;
+}
+body {
+  overflow-x: hidden;
+}
+.naslovnas{
+	width:100%;
+}
+.box1{
+	 display: block;
+	 margin-left:auto;
+	 margin-right:auto;
+}
+.box2{
+	 display: block;
+	 margin-left:auto;
+	 margin-right:auto;
+	
+}
+.box2 button{
+	 display: block;
+	 margin-left:auto;
+	 margin-right:auto;
+}
+.box2 h3{
+	text-align:center;
+	padding-top:25px;
+	padding-bottom:10px;
+}
+.box2 img{
+	width:100%;
+	
+}
+
+
+nav ul {
+	
+display:flex;
+ flex-direction:column;
+}	
+
+.povNav{
+		display: none;
+	}
+	nav img{
+		display: block;
+		width: 50px;
+	}
+	nav img:hover~.povNav{
+		display: block;	
+	}
+	nav:hover .povNav{
+		display: block;	
+	}
+	
+ table {
+    width: 100%;
+  }
+
+  th:nth-child(n+5), td:nth-child(n+4) {
+    display: none;
+  }
+  
+ #interaktivna,  #gvidea{
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+  }
+
+#gvidea iframe, #gvidea video, #interaktivna img{
+    width: 100%;
+  }
+ 
+  #interaktivna p {
+    text-align: center;
+  }
+  
+   form {
+    display: flex;
+    flex-direction: column;
+	padding-left:15px;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  form input[type="text"],  form input[type="email"], form textarea, form select {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  form button[type="submit"] {
+    width: 80%;
+  }
+}
+
+
